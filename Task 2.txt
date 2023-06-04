@@ -1,0 +1,74 @@
+1. Natalia@MacBook-Pro test4 % cd ..
+Natalia@MacBook-Pro bash_training % mkdir test3
+
+2. Natalia@MacBook-Pro bash_training % cd test3
+Natalia@MacBook-Pro test3 % touch file_4.txt file_5.txt file_6.txt
+Natalia@MacBook-Pro test3 % echo row 1 > file_4.txt
+Natalia@MacBook-Pro test3 % echo row 2 >> file_4.txt
+Natalia@MacBook-Pro test3 % echo row 3 >> file_4.txt
+Natalia@MacBook-Pro test3 % echo row 4 >> file_4.txt
+Natalia@MacBook-Pro test3 % echo row 1 > file_6.txt
+Natalia@MacBook-Pro test3 % echo row 2 >> file_6.txt
+Natalia@MacBook-Pro test3 % echo row 3 >> file_6.txt
+Natalia@MacBook-Pro test3 % echo row 4 >> file_6.txt
+
+3. Natalia@MacBook-Pro test3 % grep -i "row 2" file_5.txt
+row 2
+
+4. Natalia@MacBook-Pro test3 % grep -Ri "row" .
+./file_6.txt:row 1
+./file_6.txt:row 2
+./file_6.txt:row 3
+./file_6.txt:row 4
+./file_4.txt:row 1
+./file_4.txt:row 2
+./file_4.txt:row 3
+./file_4.txt:row 4
+./file_5.txt:row 1
+./file_5.txt:row 2
+./file_5.txt:row 3
+./file_5.txt:row 4
+
+5. Natalia@MacBook-Pro test3 % grep "row" file_6.txt
+row 1
+row 2
+row 3
+row 4
+
+6. Natalia@MacBook-Pro test3 % find file_5.txt 
+file_5.txt
+
+7. Natalia@MacBook-Pro test3 % rm -rf file_5.txt
+
+8. Natalia@MacBook-Pro test3 % echo test > file_4.txt 
+
+9. Natalia@MacBook-Pro test3 % nano file_4.txt
+Natalia@MacBook-Pro test3 % cat file_4.txt
+fail
+
+10. Natalia@MacBook-Pro test3 % echo test >> file_4.txt
+Natalia@MacBook-Pro test3 % cat file_4.txt
+fail
+test
+
+11. Natalia@MacBook-Pro bash_training % ps aux
+
+12. Natalia@MacBook-Pro bash_training % kill 666
+kill: kill 666 failed: no such process
+
+13. Natalia@MacBook-Pro bash_training % ping artsiomrusau.com
+PING artsiomrusau.com (185.215.4.92): 56 data bytes
+
+14. Natalia@MacBook-Pro bash_training % ping -c5 artsiomrusau.com
+PING artsiomrusau.com (185.215.4.92): 56 data bytes
+Request timeout for icmp_seq 0
+Request timeout for icmp_seq 1
+Request timeout for icmp_seq 2
+Request timeout for icmp_seq 3
+
+--- artsiomrusau.com ping statistics ---
+5 packets transmitted, 0 packets received, 100.0% packet loss
+
+15.[]MacBook-Pro:bash_training Natalia$ curl https://petstore.swagger.io/v2/pet/findStatus?status=available
+
+16. curl -X POST https://petstore.swagger.io/v2/user --data "user id=111" --data "username=Ivan" --data "firstName=Vanja" --data "lastName=Ianov"
